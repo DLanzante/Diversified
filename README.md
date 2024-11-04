@@ -2,7 +2,7 @@
 
 ## Overview
 
-Hello and good-afternoon, this is my **Neurodivergent Awareness Project called Diversified**! This project is dedicated to spreading awareness about neurodivergent conditions, such as **Autism**, **ADHD**, and other related diagnoses. The authors goal is to provide resources, educational content, and a collaborative space to increase understanding and reduce stigma surrounding neurodiversity. This is going to be different then Reddit because with this web app it is gpong to be developed and made for those who are neurodiverse!
+Hello and good-afternoon, this is my **Neurodivergent Awareness Project called Diversified**!
 
 ## Table of Contents
 
@@ -16,6 +16,8 @@ Hello and good-afternoon, this is my **Neurodivergent Awareness Project called D
 - [Contact](#contact)
 
 ### Project-Summary
+
+This project is dedicated to spreading awareness about neurodivergent conditions, such as **Autism**, **ADHD**, and other related diagnoses. The authors goal is to provide resources, educational content, and a collaborative space to increase understanding and reduce stigma surrounding neurodiversity. This is going to be different then Reddit because with this web app it is gpong to be developed and made for those who are neurodiverse!
 
 This project has several core objectives:
 
