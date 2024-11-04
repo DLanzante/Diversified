@@ -7,7 +7,7 @@ Hello and good-afternoon, this is my **Neurodivergent Awareness Project called D
 ## Table of Contents
 
 - [Overview](#overview)
-- [Goals](#ProjectSummary)
+- [Project Summary](#ProjectSummary)
 - [Features](#features)
 - [Getting Started](#getting-started)
 - [Contributing](#contributing)
