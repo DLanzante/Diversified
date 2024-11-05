@@ -57,6 +57,7 @@ We are going to be going over some of the most basic instructions of how to inst
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # These are my apps that I want
+    'django_filters',
     'rest_framework',  # For DRF
     'resources',       # Custom app for resources
     'community',       # Custom app for community posts
@@ -101,5 +102,139 @@ We are going to be going over some of the most basic instructions of how to inst
         return self.title
 
 9. Create serializers in each app: ```respources/serializers.py```
-10. 
-11. 
+This serializer is to convert model instances to JSON and to validate incoming user data
+   ```bash
+   from rest_framework import serializers
+   from .models import Resource
+
+   class ResourceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Resource
+        fields = '__all__'
+
+11. Create a serializer in each app: ```community/serializers.py```
+This serializer is for posts
+    ```bash
+    from rest_framework import serializers
+    from .models import Post
+
+    class PostSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Post
+        fields = '__all__'
+    
+13. Create the views and route for the API: ```recources/views.py```
+Using Django Rest Framework ```Viewset``` to define the behavior for CRUD operations
+    ```bash
+    from rest_framework import viewsets
+    from rest_framework.filters import SearchFilter
+    from django_filters.rest_framework import DjangoFilterBackend
+    from .models import Resource
+    from .serializers import ResourceSerializer
+
+    class ResourceViewSet(viewsets.ModelViewSet):
+        queryset = Resource.objects.all()
+        serializer_class = ResourceSerializer
+        filter_backends = [DjangoFilterBackend, SearchFilter]
+        filterset_fields = ['published_date']  # Allow filtering by published date
+        search_fields = ['title', 'description']  # Allow searching by title and description
+    
+15. Create the viewset for community posts
+    ```bash
+    from rest_framework import viewsets
+    from rest_framework.filters import SearchFilter
+    from django_filters.rest_framework import DjangoFilterBackend
+    from .models import Post
+    from .serializers import PostSerializer
+
+    class PostViewSet(viewsets.ModelViewSet):
+        queryset = Post.objects.all()
+        serializer_class = PostSerializer
+        filter_backends = [DjangoFilterBackend, SearchFilter]
+        filterset_fields = ['created_at']  # Allow filtering by creation date
+        search_fields = ['title', 'content']  # Allow searching by title and content
+    
+17. Update the URL's in ```diversified/urls.py```
+The author will demonstrate how to update the urls to add the necessary routers!
+    ```bash
+    from django.contrib import admin
+    from django.urls import path, include
+    from rest_framework.routers import DefaultRouter
+    from resources.views import ResourceViewSet
+    from community.views import PostViewSet
+
+    router = DefaultRouter()
+    router.register(r'resources', ResourceViewSet)
+    router.register(r'community', PostViewSet)
+
+    urlpatterns = [
+        path('admin/', admin.site.urls),
+        path('api/', include(router.urls)),
+    ]
+    
+19. We will now be dockerizing the application
+Create a ```dockerfile``` at the root of the project directory and add the following to it:
+    ```bash
+    # Use official Python image from Docker Hub
+    FROM python:3.11-slim
+
+    # Set environment variables to avoid Python buffering
+    ENV PYTHONUNBUFFERED 1
+
+    # Set the working directory
+    WORKDIR /app
+
+    # Install dependencies
+    COPY requirements.txt /app/
+    RUN pip install --no-cache-dir -r requirements.txt
+
+    # Copy project files to container
+    COPY . /app/
+
+    # Expose port
+    EXPOSE 8000
+
+    # Run the Django development server
+    CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+    
+20. Create a ```docker-compose.yml```:
+    ```bash
+    services:
+      web:
+       build: .
+       command: python manage.py runserver 0.0.0.0:8000
+       volumes:
+         - .:/app
+       ports:
+         - "8000:8000"
+       depends_on:
+         - db
+
+      db:
+       image: postgres:13
+       volumes:
+          - postgres_data:/var/lib/postgresql/data
+       environment:
+          POSTGRES_DB: neurodiverse_db
+          POSTGRES_USER: user
+          POSTGRES_PASSWORD: password
+    volumes:
+      postgres_data:
+    
+21. Create the ```requirements.txt``` file:
+    ```bash
+    Django>=4.0,<5.0
+    djangorestframework>=3.13,<4.0
+    psycopg2>=2.9,<3.0  # For PostgreSQL
+    gunicorn>=20.1,<21.0
+    
+22. Using GitHub for Version Control
+    ```bash
+    git init
+    git remote add origin <your-repository-url>
+    git add .
+    git commit -m "Initial commit"
+    git push -u origin main
+    
+24. 
+25. 
