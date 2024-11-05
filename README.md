@@ -29,19 +29,19 @@ This project has several core objectives:
 #### Installation
 We are going to be going over some of the most basic instructions of how to install all necessary repositories as well as how to get the api started and how to get started using my Diversified API!
    ```bash
-   # Getting Started with installing Django and Django REST Framework
+   # 1.Getting Started with installing Django and Django REST Framework
    pip install django djangorestframework
 
-   # Creating the new Django Project named "Diversified":
+   # 2.Creating the new Django Project named "Diversified":
    mkdir diversified
    CD diversified
    django-admin startproject diversified
 
-   # Create a new app for the project
+   # 3.Create a new app for the project
    CD diversified
    python manage.py startapp resources
 
-   ## Configuring Django (in the setting.py add the necessary configurations below:
+   # 4.Configuring Django (in the setting.py add the necessary configurations below:
    INSTALLED_APPS = [
     ...
     'rest_framework',  # Add DRF
@@ -60,5 +60,40 @@ MIDDLEWARE = [
 # CORS (Cross-Origin Resource Sharing) setup for API usage
 CORS_ORIGIN_ALLOW_ALL = True  # Be cautious with this in production
 
+   #5.Creating personal models:
+   from django.db import models
 
-   To get started with this project, follow these steps:
+class Article(models.Model):
+    title = models.CharField(max_length=200)
+    content = models.TextField()
+    author = models.CharField(max_length=100)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    category = models.CharField(max_length=100, choices=[('Autism', 'Autism'), ('ADHD', 'ADHD'), ('General', 'General')])
+
+    def __str__(self):
+        return self.title
+
+class Resource(models.Model):
+    name = models.CharField(max_length=200)
+    description = models.TextField()
+    url = models.URLField()
+    category = models.CharField(max_length=100, choices=[('Support', 'Support'), ('Education', 'Education'), ('Research', 'Research')])
+
+    def __str__(self):
+        return self.name
+   #6.Creating my own Serializers.py file:
+   from rest_framework import serializers
+from .models import Article, Resource
+
+class ArticleSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Article
+        fields = ['id', 'title', 'content', 'author', 'created_at', 'updated_at', 'category']
+
+class ResourceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Resource
+        fields = ['id', 'name', 'description', 'url', 'category']
+```
+
