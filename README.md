@@ -238,8 +238,25 @@ Create a ```dockerfile``` at the root of the project directory and add the follo
     git commit -m "Initial commit"
     git push -u origin main
 
-### Getting-Started
+#### Getting-Started
 1. After this we can finally do our docker command to stand the app up to be able to use docker!
     ```bash
     docker compose up --build
 
+<!-- LICENSE -->
+#### License
+
+Distributed under the MIT License. See `LICENSE.md` for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- CONTACT -->
+### Contact
+
+Dominic Lanzante - [@my_instagram](https://www.instagram.com/dlanzante2018/) - dlanzante@unomaha.edu
+
+Project Link: [https://github.com/DLanzante/diversified](https://github.com/DLanzante/diversified)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
