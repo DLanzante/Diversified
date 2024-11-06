@@ -10,7 +10,10 @@ Hello and good-afternoon, this is my **Neurodivergent Awareness Project called D
 - [Project Summary](#Project-Summary)
    - [Installation](#Installation)
    - [Getting Started](#Getting-Started)
-   - [User Stories](#User-Stories)
+- [User Stories](#User-Stories)
+   - [Acceptance Criteria](#Acceptance-Criteria)
+   - [Mis-User Stories](#Mis-User-Stories)
+   - [Mitigating Criteria](#Mitigating-Criteria)
 - [Diagrams](#Diagrams)
 - [Prototype](#Prototype)
 - [License](#license)
@@ -245,7 +248,31 @@ Create a ```dockerfile``` at the root of the project directory and add the follo
 
 ### User-Stories
 
+1. User Story:
+   ```bash
+   As a **user**, I want to be able to submit and post certain things that I am passionate about others learning about so that I can not only educate others but also to spread awareness and a safe space for others with neuro-divergent conditions.
+
+2. User Story:
+   ```bash
+   As a **user** I want to be able to view the communities posts that I am interested in so that I may be able to comment and share/spread my expereinces as well
+   
+3. User Story:
+   ```bash
+   As an **Administrator** I want to be able to not only have the right to take on and off posts that are harmful and cross the community guidelines as well as ensure that others aren't abusing policy!
+
+4. User Story:
+   ```bash
+   As an **Admin** I want to be able to pull all comments and provide statistics to interested buyers so that they can see how many people view the site as well as what they are doing while on the site to better provide a solid starting point for possibly a futher development of the web api
+
+#### Acceptance-Criteria
+
+#### Mis-User Stories
+
+#### Mitigating Criteria
+
 ### Diagrams
+
+[Good F'ing Luck]
 
 <!-- LICENSE -->
 ### License
