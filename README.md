@@ -11,7 +11,7 @@ Hello and good-afternoon, this is my **Neurodivergent Awareness Project called D
    - [Installation](#Installation)
    - [Getting Started](#Getting-Started)
    - [User Stories](#User-Stories)
-   - [Diagrams](#Diagrams)
+- [Diagrams](#Diagrams)
 - [Prototype](#Prototype)
 - [License](#license)
 - [Contact](#contact)
