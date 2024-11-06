@@ -244,12 +244,9 @@ Create a ```dockerfile``` at the root of the project directory and add the follo
     docker compose up --build
 
 <!-- LICENSE -->
-#### License
+### License
 
 Distributed under the MIT License. See `LICENSE.md` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- CONTACT -->
@@ -258,5 +255,3 @@ Distributed under the MIT License. See `LICENSE.md` for more information.
 Dominic Lanzante - [@my_instagram](https://www.instagram.com/dlanzante2018/) - dlanzante@unomaha.edu
 
 Project Link: [https://github.com/DLanzante/diversified](https://github.com/DLanzante/diversified)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
