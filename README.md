@@ -10,10 +10,12 @@ Hello and good-afternoon, this is my **Neurodivergent Awareness Project called D
 - [Project Summary](#Project-Summary)
 - [Installation](#Installation)
 - [Getting Started](#Getting-Started)
-- [Contributing](#contributing)
-- [Resources](#resources)
+- [User Stories](#User-Stories)
+- [Diagrams](#Diagrams)
+- [Prototype](#Prototype)
 - [License](#license)
 - [Contact](#contact)
+- [Citations](#Citations)
 
 ### Project-Summary
 
