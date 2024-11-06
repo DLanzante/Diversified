@@ -9,7 +9,7 @@ Hello and good-afternoon, this is my **Neurodivergent Awareness Project called D
 - [Overview](#overview)
 - [Project Summary](#Project-Summary)
 - [Installation](#Installation)
-- [Getting Started](#getting-started)
+- [Getting Started](#Getting-Started)
 - [Contributing](#contributing)
 - [Resources](#resources)
 - [License](#license)
@@ -231,10 +231,13 @@ Create a ```dockerfile``` at the root of the project directory and add the follo
 22. Using GitHub for Version Control
     ```bash
     git init
-    git remote add origin <your-repository-url>
+    git remote add origin <your-github-repository-url>
     git add .
     git commit -m "Initial commit"
     git push -u origin main
-    
-24. 
-25. 
+
+### Getting-Started
+1. After this we can finally do our docker command to stand the app up to be able to use docker!
+    ```bash
+    docker compose up --build
+
