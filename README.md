@@ -245,6 +245,11 @@ Create a ```dockerfile``` at the root of the project directory and add the follo
 1. After this we can finally do our docker command to stand the app up to be able to use docker!
     ```bash
     docker compose up --build
+    docker-compose run django bash
+    python manage.py migrate
+    python manage.py makemigrations
+    python manage.py createsuperuser
+    docker-compose up
 
 ### User-Stories
 
@@ -305,6 +310,9 @@ SOFTWARE.
 <!-- CONTACT -->
 ### Contact
 
-Dominic Lanzante - [@my_instagram](https://www.instagram.com/dlanzante2018/) - dlanzante@unomaha.edu
+Dominic Lanzante - [@my_instagram](https://www.instagram.com/dlanzante2018/) - dlanzante2018
 
-Project Link: [https://github.com/DLanzante/diversified](https://github.com/DLanzante/diversified)
+Dlanzante@unomaha.edu | 402.554.2648 | University of Nebraska Omaha
+University of Nebraska Omaha, 6001 Dodge Street, Omaha, NE, 68182
+
+Project Link: [https://github.com/DLanzante/](https://github.com/DLanzante/) - Github Main
