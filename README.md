@@ -267,7 +267,7 @@ Create a ```dockerfile``` at the root of the project directory and add the follo
 
 4. User Story:
    ```bash
-   As an **Admin** I want to be able to pull all comments and provide statistics to interested buyers so that they can see how many people view the site as well as what they are doing while on the site to better provide a solid starting point for possibly a futher development of the web api
+   As an **Administrator** I want to be able to pull all comments and provide statistics to interested buyers so that they can see how many people view the site as well as what they are doing while on the site to better provide a solid starting point for possibly a futher development of the web api
 
 #### Acceptance-Criteria
 
