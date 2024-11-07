@@ -15,6 +15,8 @@ Hello and good-afternoon, this is my **Neurodivergent Awareness Project called D
    - [Mis-User Stories](#Mis-User-Stories)
    - [Mitigating Criteria](#Mitigating-Criteria)
 - [Diagrams](#Diagrams)
+   - [Mockup](#Mockup)
+   - [C4 Diagrams](#C4)
 - [Prototype](#Prototype)
 - [License](#license)
 - [Contact](#contact)
@@ -277,7 +279,11 @@ Create a ```dockerfile``` at the root of the project directory and add the follo
 
 ### Diagrams
 
-[Good F'ing Luck]
+#### Mockup
+
+#### C4
+
+[Good Luck]
 
 <!-- LICENSE -->
 ### License
