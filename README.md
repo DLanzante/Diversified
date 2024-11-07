@@ -257,11 +257,11 @@ Create a ```dockerfile``` at the root of the project directory and add the follo
 
 1. User Story:
    ```bash
-   As a **user**, I want to be able to submit and post certain things that I am passionate about others learning about so that I can not only educate others but also to spread awareness and a safe space for others with neuro-divergent conditions.
+   As a person with autism, I want to be able to submit and post certain things that I am passionate about others learning about so that I can not only educate others but also to spread awareness and a safe space for others with neuro-divergent conditions.
 
 2. User Story:
    ```bash
-   As a **user** I want to be able to view the communities posts that I am interested in so that I may be able to comment and share/spread my expereinces as well
+   As a neuro-divergent individual I want to be able to view the communities posts that I am interested in so that I may be able to comment and share/spread my expereinces as well
    
 3. User Story:
    ```bash
@@ -273,9 +273,15 @@ Create a ```dockerfile``` at the root of the project directory and add the follo
 
 #### Acceptance-Criteria
 
+Requirements for the user stories to be realized!
+
 #### Mis-User Stories
 
+Malicious user stories
+
 #### Mitigating Criteria
+
+Requirmenets you put in a system to prevent mis-user stories
 
 ### Diagrams
 
